@@ -14,8 +14,8 @@
 		"borderFrameCnt": 50,
 		"enable": true,
 		"maxInconsistentCnt": 10,
-		"mode": "default",
-		"threshold": 5,
+		"mode": "letterbox",
+		"threshold": 2,
 		"unknownFrameCnt": 600
 	},
 	"boblightServer": {
@@ -27,10 +27,11 @@
 		"enable": false
 	},
 	"color": {
+		"accuracyLevel": 2,
 		"channelAdjustment": [
 			{
 				"backlightColored": false,
-				"backlightThreshold": 0,
+				"backlightThreshold": 2,
 				"blue": [
 					0,
 					0,
@@ -77,7 +78,8 @@
 				]
 			}
 		],
-		"imageToLedMappingType": "multicolor_mean"
+		"imageToLedMappingType": "multicolor_mean_squared",
+		"reducedPixelSetFactorFactor": "1"
 	},
 	"device": {
 		"autoStart": true,
@@ -1125,10 +1127,10 @@
 		"dithering": false,
 		"enable": true,
 		"interpolationRate": 25,
-		"time_ms": 150,
+		"time_ms": 250,
 		"type": "linear",
 		"updateDelay": 0,
-		"updateFrequency": 25
+		"updateFrequency": 30
 	},
 	"webConfig": {
 		"crtPath": "",
